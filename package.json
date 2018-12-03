@@ -1,0 +1,30 @@
+{
+  "name": "nostromo-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "nostromo-css": "^0.1.5",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@storybook/addon-actions": "^4.0.11",
+    "@storybook/addon-info": "^4.0.11",
+    "@storybook/addon-links": "^4.0.11",
+    "@storybook/addons": "^4.0.11",
+    "@storybook/react": "^4.0.11",
+    "babel-loader": "^8.0.4"
+  }
+}
