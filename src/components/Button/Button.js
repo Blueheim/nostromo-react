@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { suffixes } from '../../data.js';
+import { suffixes } from '../data.js';
 
 const Button = props => {
   const roundedClasses = {};
