@@ -3,36 +3,36 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { suffixes } from '../../data.js';
 
-const Button = props => {
-  const roundedClasses = {};
+const Link = props => {
+  const radiusClasses = {};
   const borderClasses = {};
 
   suffixes.forEach(suffix => {
-    roundedClasses[`m-rounded-${suffix}`] = props[`rounded-${suffix}`];
+    radiusClasses[`m-radius-${suffix}`] = props[`rounded-${suffix}`];
     borderClasses[`m-border-${suffix}`] = props[`border-${suffix}`];
   });
 
   const classes = classNames(
-    'btn',
+    'link',
     {
       'm-primary': props.primary,
       'm-secondary': props.secondary,
       'm-tertiary': props.tertiary,
-      'm-valid': props.valid,
-      'm-invalid': props.invalid,
-      'm-info': props.info,
-      'm-alert': props.alert,
-      ...roundedClasses,
+      ...radiusClasses,
       ...borderClasses,
     },
     props.className
   );
 
-  return <button className={classes}>{props.children}</button>;
+  return (
+    <a href={props.href} className={classes}>
+      {props.children}
+    </a>
+  );
 };
 
-Button.displayName = 'Button';
+Link.displayName = 'Link';
 
-Button.defaultProps = {};
+Link.defaultProps = {};
 
-export default Button;
+export default Link;

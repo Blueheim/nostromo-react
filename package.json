@@ -1,15 +1,31 @@
 {
   "name": "nostromo-react",
   "version": "0.1.0",
-  "private": true,
+  "main": "src/components",
   "dependencies": {
     "classnames": "^2.2.6",
-    "nostromo-css": "^0.1.5",
+    "nostromo-css": "^0.1.7",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
   },
+  "files": [
+    "src/components",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blueheim/nostromo-react.git"
+  },
+  "author": {
+    "name": "Xavier Deroeux"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -26,5 +42,9 @@
     "@storybook/addons": "^4.0.11",
     "@storybook/react": "^4.0.11",
     "babel-loader": "^8.0.4"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Blueheim/nostromo-react/issues"
+  },
+  "homepage": "https://github.com/Blueheim/nostromo-react#readme"
 }

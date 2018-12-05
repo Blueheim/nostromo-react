@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { suffixes } from '../../data.js';
 
-const Button = props => {
+const Input = props => {
   const roundedClasses = {};
   const borderClasses = {};
 
@@ -13,7 +13,7 @@ const Button = props => {
   });
 
   const classes = classNames(
-    'btn',
+    'control__input',
     {
       'm-primary': props.primary,
       'm-secondary': props.secondary,
@@ -28,11 +28,13 @@ const Button = props => {
     props.className
   );
 
-  return <button className={classes}>{props.children}</button>;
+  return <input type={props.text} placeholder={props.placeholder} className={classes} />;
 };
 
-Button.displayName = 'Button';
+Input.displayName = 'Input';
 
-Button.defaultProps = {};
+Input.defaultProps = {
+  type: 'text',
+};
 
-export default Button;
+export default Input;

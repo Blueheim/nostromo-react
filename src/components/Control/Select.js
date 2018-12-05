@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { suffixes } from '../../data.js';
 
-const Button = props => {
+const Select = props => {
   const roundedClasses = {};
   const borderClasses = {};
 
@@ -13,7 +13,7 @@ const Button = props => {
   });
 
   const classes = classNames(
-    'btn',
+    'control__select',
     {
       'm-primary': props.primary,
       'm-secondary': props.secondary,
@@ -28,11 +28,17 @@ const Button = props => {
     props.className
   );
 
-  return <button className={classes}>{props.children}</button>;
+  return (
+    <select type={props.text} placeholder={props.placeholder} className={classes}>
+      {props.children}
+    </select>
+  );
 };
 
-Button.displayName = 'Button';
+Select.displayName = 'Select';
 
-Button.defaultProps = {};
+Select.defaultProps = {
+  type: 'text',
+};
 
-export default Button;
+export default Select;
