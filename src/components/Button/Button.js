@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { suffixes } from '../data.js';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import { suffixes } from '../data.js'
 
 const Button = props => {
-  const roundedClasses = {};
-  const borderClasses = {};
+  const roundedClasses = {}
+  const borderClasses = {}
 
   suffixes.forEach(suffix => {
-    roundedClasses[`m-rounded-${suffix}`] = props[`rounded-${suffix}`];
-    borderClasses[`m-border-${suffix}`] = props[`border-${suffix}`];
-  });
+    roundedClasses[`m-rounded-${suffix}`] = props[`rounded-${suffix}`]
+    borderClasses[`m-border-${suffix}`] = props[`border-${suffix}`]
+  })
 
   const classes = classNames(
     'btn',
@@ -23,16 +23,28 @@ const Button = props => {
       'm-info': props.info,
       'm-alert': props.alert,
       ...roundedClasses,
-      ...borderClasses,
+      ...borderClasses
     },
     props.className
-  );
+  )
 
-  return <button className={classes}>{props.children}</button>;
-};
+  return <button className={classes}>{props.children}</button>
+}
 
-Button.displayName = 'Button';
+Button.displayName = 'Button'
 
-Button.defaultProps = {};
+Button.defaultProps = {}
 
-export default Button;
+Button.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  primary: PropTypes.bool,
+  secondary: PropTypes.bool,
+  tertiary: PropTypes.bool,
+  valid: PropTypes.bool,
+  invalid: PropTypes.bool,
+  info: PropTypes.bool,
+  alert: PropTypes.bool
+}
+
+export default Button

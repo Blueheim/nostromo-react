@@ -1,3 +1,3 @@
-const suffixes = ['xt', 'ty', 'xs', 'sm', 'md', 'lg', 'xl', 'hg', 'xh'];
+const suffixes = ['xt', 'ty', 'xs', 'sm', 'md', 'lg', 'xl', 'hg', 'xh']
 
-export { suffixes };
+export { suffixes }

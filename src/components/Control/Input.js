@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { suffixes } from '../data.js';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import { suffixes } from '../data.js'
 
 const Input = props => {
-  const roundedClasses = {};
-  const borderClasses = {};
+  const roundedClasses = {}
+  const borderClasses = {}
 
   suffixes.forEach(suffix => {
-    roundedClasses[`m-rounded-${suffix}`] = props[`rounded-${suffix}`];
-    borderClasses[`m-border-${suffix}`] = props[`border-${suffix}`];
-  });
+    roundedClasses[`m-rounded-${suffix}`] = props[`rounded-${suffix}`]
+    borderClasses[`m-border-${suffix}`] = props[`border-${suffix}`]
+  })
 
   const classes = classNames(
     'control__input',
@@ -23,18 +23,31 @@ const Input = props => {
       'm-info': props.info,
       'm-alert': props.alert,
       ...roundedClasses,
-      ...borderClasses,
+      ...borderClasses
     },
     props.className
-  );
+  )
 
-  return <input type={props.text} placeholder={props.placeholder} className={classes} />;
-};
+  return <input type={props.text} placeholder={props.placeholder} className={classes} />
+}
 
-Input.displayName = 'Input';
+Input.displayName = 'Input'
 
 Input.defaultProps = {
-  type: 'text',
-};
+  type: 'text'
+}
 
-export default Input;
+Input.propTypes = {
+  text: PropTypes.string,
+  placeholder: PropTypes.string,
+  className: PropTypes.string,
+  primary: PropTypes.bool,
+  secondary: PropTypes.bool,
+  tertiary: PropTypes.bool,
+  valid: PropTypes.bool,
+  invalid: PropTypes.bool,
+  info: PropTypes.bool,
+  alert: PropTypes.bool
+}
+
+export default Input

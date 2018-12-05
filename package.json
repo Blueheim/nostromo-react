@@ -1,7 +1,7 @@
 {
   "name": "nostromo-react",
   "version": "0.1.0",
-  "main": "src/components",
+  "main": "lib",
   "dependencies": {
     "classnames": "^2.2.6",
     "nostromo-css": "^0.1.7",
@@ -11,7 +11,7 @@
     "react-scripts": "2.1.1"
   },
   "files": [
-    "src/components",
+    "lib",
     "LICENSE",
     "README.md"
   ],
@@ -27,12 +27,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build": "babel src/components -d lib"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -41,7 +38,18 @@
     "@storybook/addon-links": "^4.0.11",
     "@storybook/addons": "^4.0.11",
     "@storybook/react": "^4.0.11",
-    "babel-loader": "^8.0.4"
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0"
   },
   "bugs": {
     "url": "https://github.com/Blueheim/nostromo-react/issues"
