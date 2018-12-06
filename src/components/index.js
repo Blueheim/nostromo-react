@@ -1,6 +1,4 @@
 // Layout Components
-import 'nostromo-css/default.scss'
-
 export { default as App } from './Layout/App'
 export { default as Bar } from './Layout/Bar'
 export { default as Header } from './Layout/Header'
