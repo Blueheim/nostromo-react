@@ -1,15 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 const Control = props => {
-  const classes = classNames('control', {}, props.className);
+  const classes = classNames('control', {}, props.className)
 
-  return <div className={classes}>{props.children}</div>;
-};
+  return <div className={classes}>{props.children}</div>
+}
 
-Control.displayName = 'Control';
+Control.displayName = 'Control'
 
-Control.defaultProps = {};
+Control.defaultProps = {}
 
-export default Control;
+Control.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string
+}
+
+export default Control
