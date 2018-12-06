@@ -7,7 +7,7 @@ const AppLayout = props => {
 
   const classes = classNames(
     'l-app',
-    { 'l-app--dense': props.dense, 'm-fullheight': props.full },
+    { 'l-app--dense': props.dense, 'l-app--auto-rows': props.auto, 'm-fullheight': props.full },
     configClass,
     props.className
   )
@@ -24,7 +24,8 @@ AppLayout.defaultProps = {
 AppLayout.propTypes = {
   config: PropTypes.string,
   dense: PropTypes.bool,
-  full: PropTypes.full,
+  auto: PropTypes.auto,
+  full: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string
 }

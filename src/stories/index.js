@@ -6,13 +6,13 @@ import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 import { withInfo } from '@storybook/addon-info'
 
-import App from '../components/Layout/App'
-import Header from '../components/Layout/Header'
-import Main from '../components/Layout/Main'
-import Footer from '../components/Layout/Footer'
-import Section from '../components/Layout/Section'
-import Bar from '../components/Layout/Bar'
-import Modal from '../components/Layout/Modal'
+import AppLayout from '../components/Layout/AppLayout'
+import HeaderLayout from '../components/Layout/HeaderLayout'
+import MainLayout from '../components/Layout/MainLayout'
+import FooterLayout from '../components/Layout/FooterLayout'
+import SectionLayout from '../components/Layout/SectionLayout'
+import BarLayout from '../components/Layout/BarLayout'
+import ModalLayout from '../components/Layout/ModalLayout'
 
 import Button from '../components/Button/Button'
 import Link from '../components/Link/Link'
@@ -35,107 +35,115 @@ const MarginDecorator = storyFn => <div className='m-margin-md'>{storyFn()}</div
 storiesOf('Layout', module)
   .addDecorator(withInfo)
   .add('Configuration 1', () => (
-    <App full>
-      <Header primary>Header</Header>
-      <Main secondary>Main</Main>
-      <Footer tertiary>Footer</Footer>
-    </App>
+    <AppLayout full>
+      <HeaderLayout primary>HeaderLayout</HeaderLayout>
+      <MainLayout secondary>MainLayout</MainLayout>
+      <FooterLayout tertiary>FooterLayout</FooterLayout>
+    </AppLayout>
   ))
-//   .add('Configuration 2', () => (
-//     <App full config="2">
-//       <Bar grey1>Bar</Bar>
-//       <Header primary>Header</Header>
-//       <Main secondary>Main</Main>
-//       <Footer tertiary>Footer</Footer>
-//     </App>
-//   ))
-//   .add('Configuration 3', () => (
-//     <App full config="3">
-//       <Bar grey1>Bar</Bar>
-//       <Header primary>Header</Header>
-//       <Main secondary>Main</Main>
-//       <Footer tertiary>Footer</Footer>
-//     </App>
-//   ))
-//   .add('Configuration 4', () => (
-//     <App full config="4">
-//       <Bar left grey1>
-//         Left Bar
-//       </Bar>
-//       <Bar right grey1>
-//         Right Bar
-//       </Bar>
-//       <Header primary>Header</Header>
-//       <Main secondary>Main</Main>
-//       <Footer tertiary>Footer</Footer>
-//     </App>
-//   ))
-// .add('Configuration 5', () => (
-//   <App full config='5'>
-//     <Bar grey1>Bar</Bar>
-//     <Header primary>Header</Header>
-//     <Main secondary>Main</Main>
-//     <Footer tertiary>Footer</Footer>
-//   </App>
-// ))
-//   .add('Configuration 6', () => (
-//     <App dense full config="6">
-//       <Bar left grey1>
-//         Left Bar
-//       </Bar>
-//       <Bar right grey1>
-//         Right Bar
-//       </Bar>
-//       <Header primary>Header</Header>
-//       <Main secondary>Main</Main>
-//       <Footer tertiary>Footer</Footer>
-//     </App>
-//   ))
-//   .add('Configuration 7', () => (
-//     <App dense full config="7">
-//       <Bar grey1>Bar</Bar>
-//       <Header primary>Header</Header>
-//       <Main secondary>Main</Main>
-//       <Footer tertiary>Footer</Footer>
-//     </App>
-//   ))
-//   .add('Configuration 8', () => (
-//     <App dense full config="8">
-//       <Bar grey1>Bar</Bar>
-//       <Header primary>Header</Header>
-//       <Main secondary>Main</Main>
-//       <Footer tertiary>Footer</Footer>
-//     </App>
-//   ))
-//   .add('Modal', () => (
-//     <Modal>
-//       <div className="m-primary--reverse">TEST</div>
-//     </Modal>
-//   ));
+  .add('Configuration 2', () => (
+    <AppLayout full config='2'>
+      <BarLayout info>BarLayout</BarLayout>
+      <HeaderLayout primary>HeaderLayout</HeaderLayout>
+      <MainLayout secondary>MainLayout</MainLayout>
+      <FooterLayout tertiary>FooterLayout</FooterLayout>
+    </AppLayout>
+  ))
+  .add('Configuration 3', () => (
+    <AppLayout full config='3'>
+      <BarLayout info>BarLayout</BarLayout>
+      <HeaderLayout primary>HeaderLayout</HeaderLayout>
+      <MainLayout secondary>MainLayout</MainLayout>
+      <FooterLayout tertiary>FooterLayout</FooterLayout>
+    </AppLayout>
+  ))
+  .add('Configuration 4', () => (
+    <AppLayout full config='4'>
+      <BarLayout left info>
+        Left BarLayout
+      </BarLayout>
+      <BarLayout right info>
+        Right BarLayout
+      </BarLayout>
+      <HeaderLayout primary>HeaderLayout</HeaderLayout>
+      <MainLayout secondary>MainLayout</MainLayout>
+      <FooterLayout tertiary>FooterLayout</FooterLayout>
+    </AppLayout>
+  ))
+  .add('Configuration 5', () => (
+    <AppLayout full config='5'>
+      <BarLayout info>BarLayout</BarLayout>
+      <HeaderLayout primary>HeaderLayout</HeaderLayout>
+      <MainLayout secondary>MainLayout</MainLayout>
+      <FooterLayout tertiary>FooterLayout</FooterLayout>
+    </AppLayout>
+  ))
+  .add('Configuration 6', () => (
+    <AppLayout full config='6'>
+      <BarLayout left info>
+        Left BarLayout
+      </BarLayout>
+      <BarLayout right info>
+        Right BarLayout
+      </BarLayout>
+      <HeaderLayout primary>HeaderLayout</HeaderLayout>
+      <MainLayout secondary>MainLayout</MainLayout>
+      <FooterLayout tertiary>FooterLayout</FooterLayout>
+    </AppLayout>
+  ))
+  .add('Configuration 7', () => (
+    <AppLayout full config='7'>
+      <BarLayout info>BarLayout</BarLayout>
+      <HeaderLayout primary>HeaderLayout</HeaderLayout>
+      <MainLayout secondary>MainLayout</MainLayout>
+      <FooterLayout tertiary>FooterLayout</FooterLayout>
+    </AppLayout>
+  ))
+  .add('Configuration 8', () => (
+    <AppLayout full config='8'>
+      <BarLayout info>BarLayout</BarLayout>
+      <HeaderLayout primary>HeaderLayout</HeaderLayout>
+      <MainLayout secondary>MainLayout</MainLayout>
+      <FooterLayout tertiary>FooterLayout</FooterLayout>
+    </AppLayout>
+  ))
+  .add('Configuration 9', () => (
+    <AppLayout full config='9'>
+      <BarLayout info>BarLayout</BarLayout>
+      <HeaderLayout primary>HeaderLayout</HeaderLayout>
+      <MainLayout secondary>MainLayout</MainLayout>
+      <FooterLayout tertiary>FooterLayout</FooterLayout>
+    </AppLayout>
+  ))
+  .add('ModalLayout', () => (
+    <ModalLayout>
+      <div className='m-primary--reverse'>TEST</div>
+    </ModalLayout>
+  ))
 
-// storiesOf('Section', module)
+// storiesOf('SectionLayout', module)
 //   .addDecorator(withInfo)
 //   .add('Simple', () => (
-//     <App full>
-//       <Main>
-//         <Section simple>
+//     <AppLayout full>
+//       <MainLayout>
+//         <SectionLayout simple>
 //           <div className="m-primary">Div 1</div>
 //           <div className="m-secondary">Div 2</div>
 //           <div className="m-tertiary">Div 3</div>
-//         </Section>
-//       </Main>
-//     </App>
+//         </SectionLayout>
+//       </MainLayout>
+//     </AppLayout>
 //   ))
 //   .add('Auto', () => (
-//     <App full>
-//       <Main>
-//         <Section auto>
+//     <AppLayout full>
+//       <MainLayout>
+//         <SectionLayout auto>
 //           <div className="m-primary">Div 1</div>
 //           <div className="m-secondary">Div 2</div>
 //           <div className="m-tertiary">Div 3</div>
-//         </Section>
-//       </Main>
-//     </App>
+//         </SectionLayout>
+//       </MainLayout>
+//     </AppLayout>
 //   ));
 
 storiesOf('Button', module)
