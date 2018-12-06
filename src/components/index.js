@@ -12,7 +12,7 @@ export { default as Section } from './Layout/Section'
 // Components
 export { default as Button } from './Button/Button'
 export { default as Control } from './Control/Control'
-export { default as Image } from './Control/Image'
+export { default as Image } from './Image/Image'
 export { default as Input } from './Control/Input'
 export { default as Select } from './Control/Select'
 export { default as Link } from './Link/Link'
