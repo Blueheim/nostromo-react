@@ -1,11 +1,11 @@
 // Layout Components
-export { default as App } from './Layout/App'
-export { default as Bar } from './Layout/Bar'
-export { default as Header } from './Layout/Header'
-export { default as Footer } from './Layout/Footer'
-export { default as Main } from './Layout/Main'
-export { default as Modal } from './Layout/Modal'
-export { default as Section } from './Layout/Section'
+export { default as AppLayout } from './Layout/AppLayout'
+export { default as BarLayout } from './Layout/BarLayout'
+export { default as HeaderLayout } from './Layout/HeaderLayout'
+export { default as FooterLayout } from './Layout/FooterLayout'
+export { default as MainLayout } from './Layout/MainLayout'
+export { default as ModalLayout } from './Layout/ModalLayout'
+export { default as SectionLayout } from './Layout/SectionLayout'
 
 // Components
 export { default as Button } from './Button/Button'
