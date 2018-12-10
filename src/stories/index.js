@@ -27,6 +27,8 @@ import NavLink from '../components/Navigation/NavLink'
 
 import Control from '../components/Control/Control'
 import Input from '../components/Control/Input'
+import Radio from '../components/Control/Radio'
+import Switch from '../components/Control/Switch'
 
 import logo from '../../assets/img/logo-black.svg'
 
@@ -273,4 +275,37 @@ storiesOf('Select', module)
         <Input placeholder='Rechercher' />
       </Control>
     </>
+  ))
+
+storiesOf('Radio', module)
+  .addDecorator(withInfo)
+  .addDecorator(MarginDecorator)
+  .add('Basic', () => (
+    <Control center>
+      <Radio id='option1' name='options' value='1'>
+        Option 1
+      </Radio>
+      <Radio id='option2' name='options' value='2'>
+        Option 2
+      </Radio>
+    </Control>
+  ))
+
+storiesOf('Switch', module)
+  .addDecorator(withInfo)
+  .addDecorator(MarginDecorator)
+  .add('Basic', () => (
+    <Control>
+      <Switch id='switch1' name='switch1' value='switch' />
+    </Control>
+  ))
+  .add('With theme', () => (
+    <Control>
+      <Switch id='switch1' name='switch1' value='switch' primary />
+    </Control>
+  ))
+  .add('Rounded', () => (
+    <Control>
+      <Switch id='switch1' name='switch1' value='switch' valid rounded-xx />
+    </Control>
   ))
