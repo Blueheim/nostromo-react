@@ -1,6 +1,6 @@
 {
   "name": "nostromo-react",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "main": "lib",
   "dependencies": {
     "classnames": "^2.2.6",
