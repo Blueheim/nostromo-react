@@ -1,34 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { suffixes } from '../data.js'
+import { getFullClassObject } from '../util'
 
 const Button = props => {
-  const roundedClasses = {}
-  const borderClasses = {}
+  const classes = classNames('btn', { ...getFullClassObject(props) }, props.className)
 
-  suffixes.forEach(suffix => {
-    roundedClasses[`m-rounded-${suffix}`] = props[`rounded-${suffix}`]
-    borderClasses[`m-border-${suffix}`] = props[`border-${suffix}`]
-  })
-
-  const classes = classNames(
-    'btn',
-    {
-      'm-primary': props.primary,
-      'm-secondary': props.secondary,
-      'm-tertiary': props.tertiary,
-      'm-valid': props.valid,
-      'm-invalid': props.invalid,
-      'm-info': props.info,
-      'm-alert': props.alert,
-      ...roundedClasses,
-      ...borderClasses
-    },
-    props.className
+  return (
+    <button className={classes} {...props.attributes} {...props.eventHandlers}>
+      {props.children}
+    </button>
   )
-
-  return <button className={classes}>{props.children}</button>
 }
 
 Button.displayName = 'Button'
@@ -44,7 +26,9 @@ Button.propTypes = {
   valid: PropTypes.bool,
   invalid: PropTypes.bool,
   info: PropTypes.bool,
-  alert: PropTypes.bool
+  alert: PropTypes.bool,
+  attributes: PropTypes.shape({ type: PropTypes.string }),
+  eventHandlers: PropTypes.objectOf(PropTypes.func)
 }
 
 export default Button

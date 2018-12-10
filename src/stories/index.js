@@ -151,8 +151,12 @@ storiesOf('Layout', module)
 storiesOf('Button', module)
   .addDecorator(withInfo)
   .addDecorator(MarginDecorator)
-  .add('Basic', () => <Button>Click</Button>)
-  .add('Primary', () => <Button primary>Click</Button>)
+  .add('Basic', () => <Button padding-md>Click</Button>)
+  .add('Primary', () => (
+    <Button border-md-left primary>
+      Click
+    </Button>
+  ))
   .add('Secondary', () => <Button secondary>Click</Button>)
   .add('Tertiary', () => <Button tertiary>Click</Button>)
   .add('Valid', () => <Button valid>Click</Button>)
@@ -227,16 +231,32 @@ storiesOf('Input', module)
   .add('Basic', () => (
     <>
       <Control>
-        <Input placeholder='Rechercher' />
+        <Input
+          attributes={{ type: 'text', placeholder: 'Rechercher' }}
+          eventHandlers={{ onInput: action('clicked') }}
+        />
       </Control>
       <Control>
-        <Input placeholder='Rechercher' primary />
+        <Input
+          attributes={{ type: 'text', placeholder: 'Rechercher' }}
+          eventHandlers={{ onInput: action('clicked') }}
+          primary
+        />
       </Control>
       <Control>
-        <Input placeholder='Rechercher' secondary />
+        <Input
+          attributes={{ type: 'text', placeholder: 'Rechercher' }}
+          eventHandlers={{ onInput: action('clicked') }}
+          secondary
+        />
       </Control>
       <Control>
-        <Input placeholder='Rechercher' tertiary />
+        <Input
+          attributes={{ type: 'text', placeholder: 'Rechercher' }}
+          eventHandlers={{ onInput: action('clicked') }}
+          tertiary
+          rounded-xx
+        />
       </Control>
     </>
   ))
@@ -282,10 +302,16 @@ storiesOf('Radio', module)
   .addDecorator(MarginDecorator)
   .add('Basic', () => (
     <Control center>
-      <Radio id='option1' name='options' value='1'>
+      <Radio
+        attributes={{ id: 'option1', name: 'options', value: '1' }}
+        eventHandlers={{ onChange: action('changed') }}
+      >
         Option 1
       </Radio>
-      <Radio id='option2' name='options' value='2'>
+      <Radio
+        attributes={{ id: 'option2', name: 'options', value: '2' }}
+        eventHandlers={{ onChange: action('changed') }}
+      >
         Option 2
       </Radio>
     </Control>
@@ -296,16 +322,19 @@ storiesOf('Switch', module)
   .addDecorator(MarginDecorator)
   .add('Basic', () => (
     <Control>
-      <Switch id='switch1' name='switch1' value='switch' />
+      <Switch
+        attributes={{ id: 'switch1', name: 'switch1', value: 'switch' }}
+        eventHandlers={{ onChange: action('changed') }}
+      />
     </Control>
   ))
   .add('With theme', () => (
     <Control>
-      <Switch id='switch1' name='switch1' value='switch' primary />
+      <Switch attributes={{ id: 'switch1', name: 'switch1', value: 'switch' }} primary />
     </Control>
   ))
   .add('Rounded', () => (
     <Control>
-      <Switch id='switch1' name='switch1' value='switch' valid rounded-xx />
+      <Switch attributes={{ id: 'switch1', name: 'switch1', value: 'switch' }} valid rounded-xx />
     </Control>
   ))
