@@ -24,7 +24,7 @@ AppLayout.defaultProps = {
 AppLayout.propTypes = {
   config: PropTypes.string,
   dense: PropTypes.bool,
-  auto: PropTypes.auto,
+  auto: PropTypes.bool,
   full: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string
