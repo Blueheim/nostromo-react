@@ -29,6 +29,7 @@ import Control from '../components/Control/Control'
 import Input from '../components/Control/Input'
 import Radio from '../components/Control/Radio'
 import Switch from '../components/Control/Switch'
+import Select from '../components/Control/Select'
 
 import logo from '../../assets/img/logo-black.svg'
 
@@ -292,7 +293,12 @@ storiesOf('Select', module)
   .add('Basic', () => (
     <>
       <Control>
-        <Input placeholder='Rechercher' />
+        <Select primary>
+          <option value='1'>Option 1</option>
+          <option value='2'>Option 2</option>
+          <option value='3'>Option 3</option>
+          <option value='4'>Option 4</option>
+        </Select>
       </Control>
     </>
   ))
