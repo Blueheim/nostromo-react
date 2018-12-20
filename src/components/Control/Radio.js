@@ -13,7 +13,7 @@ const Radio = props => {
       <input type='radio' className='control__radio-input' {...props.attributes} {...props.eventHandlers} />
       <label htmlFor={props.attributes.id} className={radioClasses}>
         <span className={elementClasses} />
-        <span className='control__radio-text m-text-grey-dark-1'>{props.children}</span>
+        <span className='control__radio-text'>{props.children}</span>
       </label>
     </div>
   )
