@@ -28,6 +28,7 @@ import NavLink from '../components/Navigation/NavLink'
 import Control from '../components/Control/Control'
 import Input from '../components/Control/Input'
 import Radio from '../components/Control/Radio'
+import Checkbox from '../components/Control/Checkbox'
 import Switch from '../components/Control/Switch'
 import Select from '../components/Control/Select'
 
@@ -328,6 +329,21 @@ storiesOf('Radio', module)
       >
         Option 2
       </Radio>
+    </Control>
+  ))
+
+storiesOf('Checkbox', module)
+  .addDecorator(withInfo)
+  .addDecorator(MarginDecorator)
+  .add('Basic', () => (
+    <Control>
+      <Checkbox
+        primary
+        attributes={{ id: 'check', name: 'check', value: 'check' }}
+        eventHandlers={{ onChange: action('changed') }}
+      >
+        Check
+      </Checkbox>
     </Control>
   ))
 
